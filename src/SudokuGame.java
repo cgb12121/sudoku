@@ -71,6 +71,7 @@ public class SudokuGame extends JFrame {
 
         //Size bảng, hiển thị
         setSize(600, 600);
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 

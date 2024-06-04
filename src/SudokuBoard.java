@@ -7,7 +7,7 @@ public class SudokuBoard {
     private int[][] board;                                  // Bảng Sudoku
     private int[][] solutionBoard;                          // Bảng Sudoku chứa giải (ẩn khi trò chơi bắt đầu)
     private static final int BOARD_SIZE = 9;                // Kích thước bảng Sudoku
-    private static final int MIN_FILLED_CELLS = 30;         // Số ô ít nhất cho trước giá trị
+    private static final int FILLED_CELLS = 30;             // Số ô cho trước giá trị
 
     /**
      * Hàm khởi tạo tạo bảng Sudoku mới.
@@ -186,7 +186,7 @@ public class SudokuBoard {
      */
     private void removeDigits() {
         int totalCells = BOARD_SIZE * BOARD_SIZE;
-        int cellsToRemove = totalCells - MIN_FILLED_CELLS;
+        int cellsToRemove = totalCells - FILLED_CELLS;
         Random rand = new Random();
 
         // Loại bỏ các chữ số từ bảng một cách ngẫu nhiên
